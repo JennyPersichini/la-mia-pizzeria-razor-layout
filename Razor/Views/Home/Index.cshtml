@@ -15,6 +15,13 @@
 
         </p>   
 
+        @{
+            string myName = "Jenny";
+            string mySurname = "Persichini";
+        }
+
+        <h2>@myName @mySurname</h2>
+
     </div>
 
     <div>
@@ -28,6 +35,20 @@
             </strong>
 
         </p>
+
+        @{
+            int sum(int n)
+            {
+                int sum = 0;
+                for (int i=0; i<=n; i++)
+                {
+                    sum = sum + i;
+                }
+                return sum;
+            }
+        }
+
+        <span>@sum(10)</span>
 
     </div>
 
@@ -43,6 +64,13 @@
 
         </p>
 
+        @{
+            string frase = "Nel mezzo del cammin di nostra vita";
+            int countA = frase.Count(lettera => lettera == 'a');
+        }
+
+        <p>La lettera <strong>A</strong> è presente @countA volte</p>
+
     </div>
 
     <div>
@@ -57,6 +85,30 @@
 
         </p>
 
+        @{
+            List<int> numeriInteri = new List<int>();
+
+            Random random = new Random();
+
+            for (int i=0; i<20; i++)
+            {
+                int randomNumber = random.Next(1, 91);
+                numeriInteri.Add(random.Next(randomNumber));
+            }
+        }
+
+        <ul>
+
+            @foreach (int num in numeriInteri)
+            {
+                @if (num > 20 && num < 70)
+                {
+                    <li>@num</li>
+                }
+            }
+
+        </ul>
+
     </div>
 
     <div>
@@ -69,6 +121,8 @@
             </strong>
 
         </p>
+
+        <p>@DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")</p>
 
     </div>
 
