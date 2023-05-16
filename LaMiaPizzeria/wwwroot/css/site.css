@@ -9,18 +9,22 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    background-image: linear-gradient(to top right, #fff8d8 0%, #fab215 50%, #fff8d8 100%);
 }
 
 .card {
-    height: 500px;
+    height: 400px;
 }
 
 img {
-    height: 50%;
+    height: 55%;
+}
+
+.footer-opacity {
+    opacity: 0.8;
 }
